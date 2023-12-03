@@ -1,0 +1,27 @@
+@use "./variables" as *;
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: $opacity-white-color;
+  
+    &__container1, &__container2 {
+        background-color: $opacity-white-color;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin-bottom: 30PX;
+    }
+    
+    &__image1 {
+        width: 50px;
+        align-self: center;
+    }
+
+    &__image2 {
+        width: 80px;
+        align-self: center;
+    }
+
+}

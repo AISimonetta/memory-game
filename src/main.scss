@@ -1,19 +1,13 @@
 @use "./variables" as *;
-// @use "./mainSection";
-
+@use "./btn-audio";
+@use "./cards";
+@use "./header";
 
 body {
     background-image: url("../img/background.jpeg");
-    backdrop-filter: grayscale(60%);
+    backdrop-filter: grayscale(40%);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
-
-}
-
-.pageContent {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
