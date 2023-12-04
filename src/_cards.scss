@@ -11,7 +11,8 @@
         display: flex;
         flex-direction: column;
         width: 100vw;
-        margin-bottom: 30PX;
+        margin-bottom: 10px;
+        padding: 10px 0;
     }
     
     &__image1 {
@@ -24,4 +25,43 @@
         align-self: center;
     }
 
+    &__firstBlock, &__secondBlock {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10px 10px;
+    }
+
+    .frontCard {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .backCard {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+    }
+}
+
+
+#finley {
+border: 2px solid $finley-color;
+}
+#nancy {
+    border: 2px solid $nancy-color;
+}
+#pedro {
+    border: 2px solid $blue-color;
+}
+#luana {
+    border: 2px solid $luana-color;
+}
+#mattia {
+    border: 2px solid $cerulean-color;
+}
+#daddy {
+    border: 2px solid $orange-color;
 }
