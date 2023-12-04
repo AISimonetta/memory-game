@@ -28,40 +28,62 @@
     &__firstBlock, &__secondBlock {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-around;
         padding: 10px 10px;
     }
 
+    &__cardContent {
+        position: relative;
+    }
+
+}
+
+.frontCard {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.6s ease;
+    transform: rotateY(180deg);
+    display: none
+    
+}
+
+.backCard {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.6s ease;
+    transform: rotateY(0deg);
+    display: block
+}
+.cards__flip {
     .frontCard {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
+        display: block
     }
 
     .backCard {
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
+        display: none;
     }
 }
 
-
-#finley {
+#finley, #finley2{
 border: 2px solid $finley-color;
 }
-#nancy {
+#nancy, #nancy2{
     border: 2px solid $nancy-color;
 }
-#pedro {
+#pedro, #pedro2{
     border: 2px solid $blue-color;
 }
-#luana {
+#luana, #luana2{
     border: 2px solid $luana-color;
 }
-#mattia {
+#mattia, #mattia2{
     border: 2px solid $cerulean-color;
 }
-#daddy {
+#daddy, #daddy2 {
     border: 2px solid $orange-color;
 }
