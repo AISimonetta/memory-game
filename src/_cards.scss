@@ -5,45 +5,28 @@
     flex-direction: column;
     align-items: center;
     background-attachment: $opacity-white-color;
-  
-    &__container1, &__container2 {
-        background-color: $opacity-white-color;
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-        margin-bottom: 10px;
-        padding: 10px 0;
-    }
-    
+
     &__image1 {
         width: 50px;
         align-self: center;
     }
 
-    &__image2 {
-        width: 80px;
-        align-self: center;
-    }
-
-    &__firstBlock, &__secondBlock {
+    &__cardContainer {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        padding: 10px 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 30px;
     }
-
-    &__cardContent {
-        position: relative;
-    }
-
 }
 
+.cardContent {
+    position: relative;
+}
 .frontCard {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    position: absolute;
     transition: transform 0.6s ease;
     transform: rotateY(180deg);
     display: none
@@ -67,23 +50,4 @@
     .backCard {
         display: none;
     }
-}
-
-#finley, #finley2{
-border: 2px solid $finley-color;
-}
-#nancy, #nancy2{
-    border: 2px solid $nancy-color;
-}
-#pedro, #pedro2{
-    border: 2px solid $blue-color;
-}
-#luana, #luana2{
-    border: 2px solid $luana-color;
-}
-#mattia, #mattia2{
-    border: 2px solid $cerulean-color;
-}
-#daddy, #daddy2 {
-    border: 2px solid $orange-color;
 }
