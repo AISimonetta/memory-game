@@ -61,7 +61,7 @@ const checkCardsMatch = (firstFlippedCard: string | null, secondFlippedCard: str
     if (firstFlippedCard === secondFlippedCard) {
         matchedCards.forEach(card => {
             card.classList.add("cards__matched");
-            card.classList.add("cards__fireWorkParticle");
+            card.classList.add("cards__firework");
             }
         );
         //asd some conffetti!!
@@ -93,10 +93,13 @@ const resetGame = () => {
     secondFlippedCard = null;
 
     const cards = document.querySelectorAll<HTMLDivElement>(".cardContent");
-        cards.forEach(card  => {
-            let randomOrder = Math.floor(Math.random() * 12);
-            card.style.order = randomOrder.toString();
-    })
+    cards.forEach(card => {
+        let randomOrder = Math.floor(Math.random() * 12);
+        card.style.order = randomOrder.toString();
+        card.classList.remove("cards__flipped");
+        card.classList.remove("cards__matched");
+        card.classList.remove("cards__fireWorkParticle");
+    });
 }
 buttonReset.addEventListener("click", resetGame)
 
