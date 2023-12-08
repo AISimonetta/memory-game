@@ -3,13 +3,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-attachment: $opacity-white-color;
 
     &__image1 {
-        width: 50px;
+        width: 45px;
         align-self: center;
-        filter: drop-shadow(0px 60px 5px rgba(237, 235, 235, 0.871)
-        );
         margin-bottom: 10px;
     }
 
@@ -18,31 +15,31 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 }
 
 .cardContent {
     position: relative;
     transform-style: preserve-3d;
-}
 
-.frontCard,
-.backCard {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    transition: transform 0.6s ease;
-}
+    .frontCard,
+    .backCard {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        transition: transform 0.6s ease;
+    }
 
-.frontCard {
-    z-index: 2;
-    position: relative;
-}
-.backCard {
-    position: absolute;
-    left: 0;
-    z-index: 1;
+    .frontCard {
+        z-index: 2;
+        position: relative;
+    }
+    .backCard {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
 }
 
 .cards__flipped {
@@ -59,3 +56,59 @@
     pointer-events: none;
 }
 
+@media screen and (min-width: 768px){
+    .cards {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 70px;
+    
+        &__image1 {
+            width: 80px;
+            align-self: center;
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+    
+        &__cardContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+    }
+    
+    .cardContent {
+        position: relative;
+        transform-style: preserve-3d;
+    
+        .frontCard,
+        .backCard {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: transform 0.6s ease;
+            padding: 5px;
+        }
+    
+        .frontCard {
+            z-index: 2;
+            position: relative;
+        }
+        .backCard {
+            position: absolute;
+            left: 0;
+            z-index: 1;
+        }
+    }
+    .cards__flipped {
+        .frontCard {
+            z-index: 1;
+        }
+    
+        .backCard {
+            z-index: 2;
+        }
+    }
+}
