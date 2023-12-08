@@ -14,6 +14,7 @@
     "vite": "^5.0.0"
   },
   "dependencies": {
-    "@types/canvas-confetti": "^1.6.4"
+    "@types/canvas-confetti": "^1.6.4",
+    "canvas-confetti": "^1.9.2"
   }
 }

@@ -1,5 +1,8 @@
 import './main.scss';
 import { friendsArray } from './friendsArray';
+import confetti from 'canvas-confetti';
+
+
 
 const cardContainerAll = document.querySelector<HTMLDivElement>(".cards__cardContainer");
 
@@ -37,6 +40,15 @@ let flippedCards : number = 0;
 let firstFlippedCard : string | null;
 let secondFlippedCard : string | null;
 
+const initalRandomOrder = ()=> {
+    const cards = document.querySelectorAll<HTMLDivElement>(".cardContent");
+    cards.forEach(card => {
+    let randomOrder = Math.floor(Math.random() * 12);
+    card.style.order = randomOrder.toString();
+})}
+
+initalRandomOrder();
+
 const flipCard = (card: HTMLDivElement) => {
     if (flippedCards < maxFlippedCards) {
         card.classList.toggle("cards__flipped");
@@ -61,12 +73,10 @@ const checkCardsMatch = (firstFlippedCard: string | null, secondFlippedCard: str
     if (firstFlippedCard === secondFlippedCard) {
         matchedCards.forEach(card => {
             card.classList.add("cards__matched");
-            card.classList.add("cards__firework");
             }
         );
-        //asd some conffetti!!
+        confettiEffect();
         resetFlippedCards();
-        // lockCards();
     } else {
         //toggle screen red or black
         console.log('NOMATCH ');
@@ -80,6 +90,16 @@ const checkCardsMatch = (firstFlippedCard: string | null, secondFlippedCard: str
         }, 1000);
     };
 }
+
+const confettiEffect = () => {
+    confetti({
+        particleCount: 3000,
+        spread: 300,
+        origin: { y: 0 },
+        startVelocity: 80,
+    });
+};
+
 const resetFlippedCards = () => {
     flippedCards = 0;
     firstFlippedCard = null;
@@ -98,7 +118,6 @@ const resetGame = () => {
         card.style.order = randomOrder.toString();
         card.classList.remove("cards__flipped");
         card.classList.remove("cards__matched");
-        card.classList.remove("cards__fireWorkParticle");
     });
 }
 buttonReset.addEventListener("click", resetGame)
