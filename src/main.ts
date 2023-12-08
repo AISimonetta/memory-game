@@ -94,9 +94,9 @@ const checkCardsMatch = (firstFlippedCard: string | null, secondFlippedCard: str
 const confettiEffect = () => {
     confetti({
         particleCount: 3000,
-        spread: 300,
-        origin: { y: 0 },
-        startVelocity: 80,
+        spread: 200,
+        origin: { y: 0.5},
+        startVelocity: 45,
     });
 };
 

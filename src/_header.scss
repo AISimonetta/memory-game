@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    margin: 30px 10px;
+    margin-top: 30px;
 
     &__img {
         height: 20vh;
@@ -16,5 +16,6 @@
         font-family: $main-font;
         font-size: 1.5rem;
         text-align: center;
+        text-shadow: 3px 3px 3px $white-color;
     }
 }
