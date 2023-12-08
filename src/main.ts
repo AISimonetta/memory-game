@@ -32,7 +32,7 @@ if (!cards || !buttonReset) {
     throw new Error("There is a problem with the selector");
 }
 
-const maxFlippedCards = 2;
+let maxFlippedCards = 2;
 let flippedCards : number = 0;
 let firstFlippedCard : string | null;
 let secondFlippedCard : string | null;
@@ -59,8 +59,10 @@ const checkCardsMatch = (firstFlippedCard: string | null, secondFlippedCard: str
     console.log("TEST", secondFlippedCard);
     const matchedCards = document.querySelectorAll<HTMLDivElement>(".cards__flipped");
     if (firstFlippedCard === secondFlippedCard) {
-        matchedCards.forEach(card =>
-            card.classList.toggle("cards__matched")
+        matchedCards.forEach(card => {
+            card.classList.add("cards__matched");
+            card.classList.add("cards__fireWorkParticle");
+            }
         );
         //asd some conffetti!!
         resetFlippedCards();
@@ -70,10 +72,9 @@ const checkCardsMatch = (firstFlippedCard: string | null, secondFlippedCard: str
         console.log('NOMATCH ');
         setTimeout(() => {
             matchedCards.forEach(card => {
-               
+                if(!card.classList.contains("cards__matched"))
                 card.classList.remove("cards__flipped")
             }
-
             );
             resetFlippedCards();
         }, 1000);
@@ -85,24 +86,19 @@ const resetFlippedCards = () => {
     secondFlippedCard = null;
 }
 
-// const lockCards =() => {
-//     cards.forEach(card  => {
-//         card.removeEventListener("click",flipCard)
-// })
-// }
+const resetGame = () => {
+    maxFlippedCards = 2;
+    flippedCards = 0;
+    firstFlippedCard = null;
+    secondFlippedCard = null;
 
-// const resetGame = () => {
-//     flippedCards = 0;
-//     firstFlippedCard = null;
-//     secondFlippedCard = null;
-
-//     const cards = document.querySelectorAll<HTMLDivElement>(".cardContent");
-//         cards.forEach(card  => {
-//             let randomOrder = Math.floor(Math.random() * 12);
-//             card.style.order = randomOrder.toString();
-//     })
-// }
-// buttonReset.addEventListener("click", resetGame)
+    const cards = document.querySelectorAll<HTMLDivElement>(".cardContent");
+        cards.forEach(card  => {
+            let randomOrder = Math.floor(Math.random() * 12);
+            card.style.order = randomOrder.toString();
+    })
+}
+buttonReset.addEventListener("click", resetGame)
 
 cards.forEach(card => card.addEventListener("click", () => {
     flipCard(card);
