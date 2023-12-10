@@ -1,0 +1,46 @@
+///cards :
+//when  pressing cards aaply a hoover and active class 
+
+    .memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+    }
+
+front logoOctonauts 
+back : actual card  w photo , id and name
+scsss : each frend to have a border colour.
+    <img class="front-face" src="img/aurelia.svg" alt="Aurelia">
+    <img class="back-face" src="img/js-badge.svg" alt="Memory Card">
+        .front-face,
+        .back-face {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        position: absolute;
+        border-radius: 5px;
+        background: #1C7CCC;
+        }
+
+
+///ts :
+
+1-add cards into html in container1 & container2
+div class : .memory-card
+    >img : frontcard
+    >imgc: barccard
+</div>
+2- flipping container :
+
+// scripts.js
+const cards = document.querySelectorAll('.memory-card');
+
+function flipCard() {
+  this.classList.toggle('flip');
+}
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+In the CSS the flip class rotates the card 180deg:
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}

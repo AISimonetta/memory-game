@@ -1,0 +1,14 @@
+@use "./variables" as *;
+@use "./btn-audio";
+@use "./cards";
+@use "./header";
+
+body {
+    background-image: url("../img/background.jpeg");
+    backdrop-filter: grayscale(40%);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    background-attachment: fixed;
+}
