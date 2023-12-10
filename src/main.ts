@@ -78,7 +78,6 @@ const checkCardsMatch = (firstFlippedCard: string | null, secondFlippedCard: str
         confettiEffect();
         resetFlippedCards();
     } else {
-        //toggle screen red or black
         console.log('NOMATCH ');
         setTimeout(() => {
             matchedCards.forEach(card => {
