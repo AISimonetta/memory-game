@@ -111,14 +111,16 @@ const resetGame = () => {
     firstFlippedCard = null;
     secondFlippedCard = null;
 
-    const cards = document.querySelectorAll<HTMLDivElement>(".cardContent");
-    cards.forEach(card => {
+const cards = document.querySelectorAll<HTMLDivElement>(".cardContent");
+cards.forEach(card => {
         let randomOrder = Math.floor(Math.random() * 12);
         card.style.order = randomOrder.toString();
         card.classList.remove("cards__flipped");
         card.classList.remove("cards__matched");
     });
 }
+
+
 buttonReset.addEventListener("click", resetGame)
 
 cards.forEach(card => card.addEventListener("click", () => {
