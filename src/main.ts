@@ -30,6 +30,8 @@ cardContainerAll.innerHTML = friendCards(friendsArray)
 const cards = document.querySelectorAll<HTMLDivElement>(".cardContent");
 const buttonReset = document.querySelector<HTMLButtonElement>(".btn");
 
+const buttonReset = document.querySelector<HTMLButtonElement>(".btn");
+
 
 if (!cards || !buttonReset) {
     throw new Error("There is a problem with the selector");
@@ -125,7 +127,11 @@ buttonReset.addEventListener("click", resetGame)
 
 cards.forEach(card => card.addEventListener("click", () => {
     flipCard(card);
+    flipCard(card);
 }));
+
+
+
 
 
 
