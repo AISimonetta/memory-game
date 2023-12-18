@@ -3,47 +3,51 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-attachment: $opacity-white-color;
+    justify-content: center;
+    margin: 0 30px;
 
     &__image1 {
-        width: 50px;
+        width: 40px;
         align-self: center;
+        margin-bottom: 20px;
     }
 
     &__cardContainer {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: center;
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 }
 
 .cardContent {
     position: relative;
     transform-style: preserve-3d;
-}
 
-.frontCard,
-.backCard {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    transition: transform 0.6s ease;
-}
+    .frontCard,
+    .backCard {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        transition: transform 0.6s ease;
+    }
 
-.frontCard {
-    z-index: 2;
-    position: relative;
-}
-.backCard {
-    position: absolute;
-    left: 0;
-    z-index: 1;
+    .frontCard {
+        z-index: 2;
+        position: relative;
+    }
+    .backCard {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
 }
 
 .cards__flipped {
     .frontCard {
+        z-index: 1;
         z-index: 1;
     }
 
@@ -54,5 +58,123 @@
 
 .cards__matched {
     pointer-events: none;
+}
+
+@media screen and (min-width: 768px){
+    .cards {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px 80px;
+
+        &__image1 {
+            width: 80px;
+            align-self: center;
+            margin-bottom: 10px;
+            padding-left: 25px;
+        }
+
+        &__cardContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    .cardContent {
+        position: relative;
+        transform-style: preserve-3d;
+
+        .frontCard,
+        .backCard {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            transition: transform 0.6s ease;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .frontCard {
+            z-index: 2;
+            position: relative;
+        }
+        .backCard {
+            position: absolute;
+            left: 0;
+            z-index: 1;
+        }
+    }
+    .cards__flipped {
+        .frontCard {
+            z-index: 1;
+        }
+
+        .backCard {
+            z-index: 2;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .cards {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px 150px;
+
+        &__image1 {
+            width: 90px;
+            align-self: center;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+
+        &__cardContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    .cardContent {
+        position: relative;
+        transform-style: preserve-3d;
+
+        .frontCard,
+        .backCard {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            transition: transform 0.6s ease;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .frontCard {
+            z-index: 2;
+            position: relative;
+        }
+        .backCard {
+            position: absolute;
+            left: 0;
+            z-index: 1;
+        }
+    }
+    .cards__flipped {
+        .frontCard {
+            z-index: 1;
+        }
+
+        .backCard {
+            z-index: 2;
+        }
+    }
 }
 

@@ -1,16 +1,24 @@
 {
   "name": "memory-game",
+  "homepage": "https://AISimonetta.github.io/memory-game",
+  "author": "alejandra-simonetta",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.0",
     "sass": "^1.69.5",
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "@types/canvas-confetti": "^1.6.4",
+    "canvas-confetti": "^1.9.2"
   }
 }
