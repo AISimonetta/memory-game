@@ -3,7 +3,6 @@ import { friendsArray } from './friendsArray';
 import confetti from 'canvas-confetti';
 
 
-
 const cardContainerAll = document.querySelector<HTMLDivElement>(".cards__cardContainer");
 
 if (!cardContainerAll) {
@@ -120,16 +119,8 @@ cards.forEach(card => {
     });
 }
 
-
 buttonReset.addEventListener("click", resetGame)
 
 cards.forEach(card => card.addEventListener("click", () => {
     flipCard(card);
-    flipCard(card);
 }));
-
-
-
-
-
-
