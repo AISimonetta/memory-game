@@ -1,5 +1,7 @@
 ✦ Memory Game Project ✦
 
+A joyful project, created with love for my 4-year-old son to enjoy moments of fun and play. This engaging memory game utilizes classes and CSS to seamlessly flip and manage the cards through different functions.
+
 ✦ Technologies Used:
 
 | HTML | SCSS | BEM Methodology | TYPESCRIPT |
