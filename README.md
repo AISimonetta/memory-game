@@ -19,4 +19,4 @@ Clone this repository to your local machine and open the index.html file in a we
 
 ✦ Contact:
 
-For any inquiries, feedback, or con
+For any inquiries or feedback please get in touch.
