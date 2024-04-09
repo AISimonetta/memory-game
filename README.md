@@ -22,6 +22,8 @@ To explore this project, kindly follow these instructions:
 Clone this repository to your local machine and open the index.html file in a web browser. Alternatively, visit the deployed live version: https://aisimonetta.github.io/memory-game/
 
 ► Contact:
----
+--
+For any inquiries, feedback, or contributions to this project, please don't hesitate to get in touch. Your engagement is highly appreciated!
 
-For any inquiries or feedback please get in touch.
+[![Email Me](https://img.shields.io/badge/Email-Me-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:info@simonettaalejandra.com)
+[![Ale's LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/alejandrasimonetta)
